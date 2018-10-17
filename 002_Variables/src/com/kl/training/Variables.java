@@ -111,6 +111,30 @@ public class Variables {
             myIntArray2[0] = 10;
             myIntArray2[1] = 20;
         // int[] myIntArray = {10, 20};
+        double[] myDoubleArray = {10.2, 0.00};
+
+        float[] myFloatArray = new float[0];
+        float[] myFloatArray2 = {};
+        float[] myFloatArray3 = new float[5];
+            myFloatArray3[0] = 12.1F;
+            myFloatArray3[1] = 14F;
+            myFloatArray3[2] = 22F;
+            myFloatArray3[3] = 34F;
+            myFloatArray3[4] = 99F;
+
+        /* Vypsani prvku pole myFloatArray3 do konzole */
+        System.out.println("Hodnota prvku pole myFloatArray3 je: " + myFloatArray3[0] + ", " + myFloatArray3[1] + ", " + myFloatArray3[2] + ", " + myFloatArray3[3] + ", " + myFloatArray3[4]);
+
+        /* Vylet duchodcu z Albertova na Prazsky hrad */
+        String[] autobus1 = {"Vera", "Kveta", "Franta", "Josef"};
+        String[] autobus2 = new String[3];
+            autobus2[0] = "Spytihnev";
+            //autobus2[1] = "";
+            autobus2[2] = "Mojmir";
+
+        System.out.println("Kdo sedi na druhem miste? " + autobus2[1] + ".");
+
+        System.out.println("Hodnota prvniho prvku pole myDoubleArray: " + myDoubleArray[1]);
 
         String[] myStringArray = {"Prvek1", "Prvek2", "Prvek3"};
         String[] myStringArray2 = new String[3];
@@ -119,13 +143,23 @@ public class Variables {
             myStringArray2[2] = "Prvek3";
 
         /*
-            pritivni datove typy objektove
-         */
-        int a = 1;
-        Integer b = 2;
+            Objekty
+                - reprezentuji prvky realneho sveta
+                - maji vlastnosti
+                - mohou mit nejake metody
+        */
+            /* Tvorba objektu */
+            Dog pes1 = new Dog("Hafik", "Hneda", "Doga", 130.1);
 
-        int c = Integer.parseInt("123");
+            /* Zmena instantni promenne */
+            pes1.jmeno = "Fik";
+            System.out.println(pes1.jmeno);
 
-        System.out.println(c);
+            /* Pocet nohou - staticka promenna*/
+            System.out.println("Pocet nohou: " + pes1.pocetKoncetin);
+
+            /* Volani metody objektu */
+            pes1.bark();
+
     }
 }
